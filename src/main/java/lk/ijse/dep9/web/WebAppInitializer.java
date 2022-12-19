@@ -1,25 +1,24 @@
-package lk.ijse.dep9;
+package lk.ijse.dep9.web;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
-
     public WebAppInitializer() {
         System.out.println("WebAppInitializer()");
     }
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{WebRootConfig.class};  // add to first application context
+        return new Class[]{WebRootConfig.class};
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{WebAppConfig.class};    // add to second application context
+        return new Class[]{WebAppConfig.class};
     }
 
     @Override
     protected String[] getServletMappings() {
-        return new String[]{"/"};         //supplying url pattern for dispatcher servlet
+        return new String[]{"/"};
     }
 }

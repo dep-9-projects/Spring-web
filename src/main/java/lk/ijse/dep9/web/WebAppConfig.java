@@ -1,9 +1,12 @@
-package lk.ijse.dep9;
+package lk.ijse.dep9.web;
 
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
-public class WebRootConfig {
+@ComponentScan
+@EnableWebMvc
+public class WebAppConfig {
 }
